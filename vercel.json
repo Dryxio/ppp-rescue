@@ -24,9 +24,33 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-8HyHYz6Jf6BUXFoiFelRLeOkSjcUzrONy3AT2k/zWPs='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; frame-src 'self' about:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
+          "value": "default-src 'self'; script-src 'self' 'sha256-Xjm5Qh/WtQfbz878kj1lJQAuzVGT8O2XOBkC1xw7Lzw='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; frame-src 'self' about:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.recoverppp.com"
+        }
+      ],
+      "destination": "https://recoverppp.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "ppp-rescue.vercel.app"
+        }
+      ],
+      "destination": "https://recoverppp.com/:path*",
+      "permanent": true
     }
   ]
 }

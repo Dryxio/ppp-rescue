@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://ppp-rescue.vercel.app/sitemap.xml
+Sitemap: https://recoverppp.com/sitemap.xml

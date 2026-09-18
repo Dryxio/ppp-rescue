@@ -5,7 +5,7 @@
 
 Recover text and embedded images from supported `.ppp` documents — without installing PagePlus.
 
-**[Open the free tool →](https://ppp-rescue.vercel.app/)** · [Try the demo](https://ppp-rescue.vercel.app/) · [Share feedback](https://github.com/Dryxio/ppp-rescue/issues/new?template=feedback.yml)
+**[Open the free tool →](https://recoverppp.com/)** · [Try the demo](https://recoverppp.com/) · [Share feedback](https://github.com/Dryxio/ppp-rescue/issues/new?template=feedback.yml)
 
 No uploads. No account. No subscription.
 
