@@ -16,7 +16,7 @@ form.addEventListener('submit',async event=>{
  const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),20000);
  try{
   const response=await fetch('https://formsubmit.co/ajax/mrdryxio@gmail.com',{
-   method:'POST',mode:'cors',credentials:'omit',referrerPolicy:'no-referrer',signal:controller.signal,
+   method:'POST',mode:'cors',credentials:'omit',referrerPolicy:'origin',signal:controller.signal,
    headers:{'Content-Type':'application/json','Accept':'application/json'},
    body:JSON.stringify({rating,message,...(email?{email}:{}),_subject:'RecoverPPP feedback',_template:'table',_url:'https://recoverppp.com/',_honey:honey})
   });
