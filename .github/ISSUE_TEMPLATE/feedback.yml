@@ -1,0 +1,29 @@
+name: Recovery feedback
+description: Tell us whether your PagePlus document recovered successfully.
+title: "Recovery feedback: "
+body:
+  - type: markdown
+    attributes:
+      value: "Thank you for testing! This issue is public. Do not attach private documents, personal information, or files you do not have permission to share."
+  - type: input
+    id: version
+    attributes:
+      label: PagePlus version, if known
+      placeholder: e.g. X9
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: What happened?
+      options:
+        - I recovered useful content
+        - Some content was missing
+        - My file could not open
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What worked, or what was missing?
+      description: "Optional: tell us how recovering this document helped. Mention browser and file size if reporting a problem."
+    validations:
+      required: true
