@@ -26,6 +26,14 @@ This is content recovery: original layout, fonts, vector artwork, layer visibili
 
 For a reading-copy PDF, open the HTML export and choose **Print → Save as PDF**.
 
+## Opening a recovery path for a legacy format
+
+**To our knowledge, PPP Rescue is the first open-source, browser-based tool specifically built to recover story text and supported embedded images from Serif PagePlus ZIP/XML publications without installing PagePlus or uploading the document.**
+
+PagePlus publications can outlive the software needed to open them. PPP Rescue gives their owners an independent, inspectable way to recover supported content and reuse it in modern tools.
+
+Our review on 18 September 2026 found PagePlus still listed as a future import target by Document Liberation Project and explicitly unsupported by dexvert. [Read the research, comparison scope and priority-claim limits](docs/originality.md).
+
 ## Privacy
 
 Files stay in your browser. No analytics or AI services. The host receives ordinary website requests. Limits: 30 MB input, 100 MB expanded archive, 5,000 entries. Large documents may briefly freeze the tab.
