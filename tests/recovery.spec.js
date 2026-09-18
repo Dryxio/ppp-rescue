@@ -44,7 +44,7 @@ test('skips images with unsafe dimensions and includes warnings in exports',asyn
  const txtDownload=page.waitForEvent('download');await page.locator('#txt').click();expect(fs.readFileSync(await(await txtDownload).path(),'utf8')).toBe('Keep this text.');
 });
 test('file chooser and reset are keyboard accessible',async({page})=>{
- await page.goto('/');await page.locator('#file').focus();const chooser=page.waitForEvent('filechooser');await page.keyboard.press('Enter');await(await chooser).setFiles('public/demo.ppp');await expect(page.locator('#result')).toBeVisible();await expect(page.locator('#result-title')).toBeFocused();await page.locator('#reset').focus();await page.keyboard.press('Enter');await expect(page.locator('#file')).toBeFocused();
+ await page.goto('/');await page.locator('#file').focus();await expect(page.locator('#file')).toBeFocused();const chooser=page.waitForEvent('filechooser');await page.locator('#file').press('Enter');await(await chooser).setFiles('public/demo.ppp');await expect(page.locator('#result')).toBeVisible();await expect(page.locator('#result-title')).toBeFocused();await page.locator('#reset').focus();await page.keyboard.press('Enter');await expect(page.locator('#file')).toBeFocused();
 });
 
 test('rejects misleading metadata, excessive entries and empty content',async({page})=>{
