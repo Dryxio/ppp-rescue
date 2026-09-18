@@ -21,6 +21,6 @@ This claim concerns the combination of an open-source implementation, browser-lo
 
 PPP Rescue provides an inspectable, reusable implementation for extracting content from supported legacy publications directly in a modern browser. Its practical contribution is reducing dependence on the discontinued application for content access. It is a content-recovery route, not a faithful page-layout converter.
 
-Current validation is limited to a synthetic demonstration and two real X8/X9 publications documented in the repository. Independent user outcomes, community adoption and comparative benchmarks remain to be established.
+Current validation is limited to a synthetic demonstration and 11 real X7–X9 publications from one author documented in the repository. Independent user outcomes, community adoption and comparative benchmarks remain to be established.
 
 If an earlier equivalent implementation is identified, update the priority wording and credit that work. The practical contribution remains assessable independently of a first-to-market claim.

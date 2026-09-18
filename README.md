@@ -36,7 +36,7 @@ Our review on 18 September 2026 found PagePlus still listed as a future import t
 
 ## Privacy
 
-Files stay in your browser. No analytics or AI services. The host receives ordinary website requests. Limits: 30 MB input, 100 MB expanded archive, 5,000 entries. Large documents may briefly freeze the tab.
+Files stay in your browser. No analytics or AI services. The host receives ordinary website requests. Limits: 30 MB input, 100 MB expanded archive, 5,000 entries. Processing and downloads run in a cancellable worker with a 30-second timeout. Image and XML limits bound supported document complexity.
 
 [Report a problem](https://github.com/Dryxio/ppp-rescue/issues/new?template=feedback.yml) with the version, browser and missing content. Issues are public: don’t attach private documents.
 
@@ -50,11 +50,11 @@ npm run dev
 npm run build
 ```
 
-Tests use Chrome (`npm test`), or installed Playwright Chromium:
+Tests cover Chromium, Firefox and WebKit:
 
 ```sh
-npx playwright install chromium
-PW_CHANNEL=chromium npm test
+npx playwright install
+npm test
 ```
 
 Optional `PPP_SAMPLE_DIR` / `PPP_EXPECTED_DIR` enable local original-file tests. Validation documents come from [Softer Views](https://www.softerviews.org/PagePlus.html); third-party documents and fonts are not redistributed.
