@@ -1,3 +1,4 @@
+import {showFeedback} from './feedback.js';
 import {imageType} from './images.js';
 const $=id=>document.getElementById(id);
 let current=null,worker=null,timer=null,busy=false,imageUrls=[],generation=0;
@@ -7,7 +8,7 @@ function status(text,error=false){$('status').textContent=text;$('status').class
 function clearImages(){for(const url of imageUrls)URL.revokeObjectURL(url);imageUrls=[];$('gallery-items').replaceChildren();$('gallery').hidden=true;$('gallery').open=false;}
 function stop(){generation++;worker?.terminate();worker=null;clearTimeout(timer);timer=null;setBusy(false);}
 function clear(){clearImages();current=null;$('result').hidden=true;$('preview').srcdoc='';$('file').value='';}
-function fail(message){stop();clear();status(message,true);}
+function fail(message){stop();clear();status(message,true);showFeedback();}
 function save(bytes,name,type){const url=URL.createObjectURL(new Blob([bytes],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);}
 function warnings(){$('warnings').replaceChildren(...current.warnings.map(w=>{const li=document.createElement('li');li.textContent=w;return li;}));}
 function showImages(){clearImages();const entries=Object.entries(current.assets);$('gallery').hidden=!entries.length;$('gallery-title').textContent=`All recovered images (${entries.length})`;
@@ -19,7 +20,7 @@ function open(file){if(!file||busy)return;stop();clear();if(file.size>30e6){stat
   if(data.type==='progress'){status(data.text);return;}
   clearTimeout(timer);setBusy(false);
   if(data.type==='error'){fail(data.message);return;}
-  if(data.type==='opened'){current=data.result;$('result-title').textContent=current.title;$('counts').textContent=`${current.paragraphCount} paragraphs · ${Object.keys(current.assets).length} embedded image${Object.keys(current.assets).length===1?'':'s'}`;warnings();$('result').hidden=false;const preview=$('preview').cloneNode(false);preview.srcdoc=data.preview;$('preview').replaceWith(preview);showImages();status('Recovered locally. Review your document below.');$('result-title').focus();$('result').scrollIntoView({block:'start'});}
+  if(data.type==='opened'){current=data.result;$('result-title').textContent=current.title;$('counts').textContent=`${current.paragraphCount} paragraphs · ${Object.keys(current.assets).length} embedded image${Object.keys(current.assets).length===1?'':'s'}`;warnings();$('result').hidden=false;const preview=$('preview').cloneNode(false);preview.srcdoc=data.preview;$('preview').replaceWith(preview);showImages();status('Recovered locally. Review your document below.');showFeedback();$('result-title').focus();$('result').scrollIntoView({block:'start'});}
   if(data.type==='exported'){save(data.bytes,data.name,data.mime);status('Your download is ready.');}
  };armTimeout();worker.postMessage({type:'open',file});}catch{fail('This browser could not start local processing. Please try a current browser.');}
 }

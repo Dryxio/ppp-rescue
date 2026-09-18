@@ -2,7 +2,7 @@
 
 Recover your PagePlus text and images. Ready to read, save and reuse.
 
-**[Open the tool →](https://recoverppp.com/)** · [File compatibility](docs/compatibility.md) · [Feedback](https://github.com/Dryxio/ppp-rescue/issues/new?template=feedback.yml)
+**[Open the tool →](https://recoverppp.com/)** · [File compatibility](docs/compatibility.md) · [Feedback](https://recoverppp.com/#feedback)
 
 Free and open source. No account, installation or document uploads.
 

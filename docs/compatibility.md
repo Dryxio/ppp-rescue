@@ -28,6 +28,6 @@ Processing runs in a cancellable worker with a 30-second timeout. If a file cann
 
 ## Privacy and feedback
 
-Documents stay in your browser. No analytics or AI services are used. The host receives ordinary website requests.
+Documents stay in your browser. No analytics or AI services are used. The host receives ordinary website requests. If you submit feedback, your selected answer, optional message and optional reply email are sent through FormSubmit to mrdryxio@gmail.com. No document, filename, extracted text, images or recovery diagnostics are included automatically. FormSubmit receives connection information and retains submissions for 30 days; email copies remain in our inbox. You can email us to request deletion.
 
-[Report a problem](https://github.com/Dryxio/ppp-rescue/issues/new?template=feedback.yml) with your browser, PagePlus version and what you expected to recover. Issues are public: do not attach private documents.
+[Send feedback](https://recoverppp.com/#feedback) without an account, or email [mrdryxio@gmail.com](mailto:mrdryxio@gmail.com). Please do not include private document content.
